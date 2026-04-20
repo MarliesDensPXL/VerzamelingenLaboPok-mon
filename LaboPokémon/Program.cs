@@ -34,8 +34,24 @@
             Pokemon bonsly = new Pokemon("Bonsly", "Rock");            
             Pokemon treecko = new Pokemon("Treecko", "Grass");
 
-            Pokemon[] pokémon2 = new Pokemon[] {charmeleon, raichu, golem, eevee, bonsly, treecko};
+            Pokemon[] pokémon1 = new Pokemon[] {charmeleon, raichu, golem, eevee, bonsly, treecko};
+            Pokemon[] pokémon2 = new Pokemon[] { raichu, golem, eevee, bonsly, treecko, charmeleon };
+
+            Trainer trainer1 = new Trainer();
+            trainer1.Pokemon = pokémon1;
             
+            Trainer trainer2 = new Trainer();
+            trainer2.Pokemon = pokémon2;
+
+            Console.WriteLine(trainer1.Pokemon);
+            Console.WriteLine(trainer2.Pokemon);
+
+            TradeFirstPokemon(trainer1, trainer2);
+
+            Console.WriteLine(trainer1.Pokemon);
+            Console.WriteLine(trainer2.Pokemon);
+
+
         }
 
         static void PrintPokemonRoster(string[] names)
@@ -52,6 +68,23 @@
                 return true;
             else
                 return false;
+        }
+
+        static void TradeFirstPokemon(Trainer trainer1, Trainer trainer2) // GEKNOEI 
+        {
+            // Array.Clear(trainer1.Pokemon, 0, 0);
+            // trainer1.Pokemon[0] = trainer2.Pokemon[0];
+
+        
+
+            
+            //Pokemon[] tradedPokémon1 = new Pokemon[] { trainer1.Pokemon[0], trainer2.Pokemon[1], trainer2.Pokemon[2], trainer2.Pokemon[3], trainer2.Pokemon[4], trainer2.Pokemon[5] };
+            //Pokemon[] tradedPokémon2 = new Pokemon[] { trainer2.Pokemon[0], trainer1.Pokemon[1], trainer1.Pokemon[2], trainer1.Pokemon[3], trainer1.Pokemon[4], trainer1.Pokemon[5] };
+
+            //trainer2.Pokemon = {trainer1.Pokemon[0], trainer2.Pokemon[1], trainer2.Pokemon[2], trainer2.Pokemon[3], trainer2.Pokemon[4], trainer2.Pokemon[5] };
+            //Pokemon[] tradedPokémon2 = new Pokemon[] { trainer2.Pokemon[0], trainer1.Pokemon[1], trainer1.Pokemon[2], trainer1.Pokemon[3], trainer1.Pokemon[4], trainer1.Pokemon[5] };
+
+            // string firstPokemon = trainer1.Pokemon[0].ToString();
         }
     }
 }

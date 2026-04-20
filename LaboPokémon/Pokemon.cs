@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LaboPokémon
 {
-    internal class Pokemon
+    public class Pokemon
     {
 		private string _name;
 

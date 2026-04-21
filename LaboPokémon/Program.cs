@@ -4,15 +4,27 @@
     {
         static void Main(string[] args)
         {
-            string[] pokémon = new string[4];
+            //1.2
+            string[] pokémon = new string[6];
+
+            //1.3
+
             pokémon[0] = "Pikachu";
             pokémon[1] = "Bulbasaur";
             pokémon[2] = "Charmander";
             pokémon[3] = "Squirtle";
 
+            //1.4
             Console.WriteLine(pokémon[0]);
 
-            Array.Clear(pokémon, 1, 1);
+            //1.5
+           // pokémon[2] = ""; maakt de string leeg
+            // pokémon[2] = string.Empty; maakt de string ook leeg. Doet exact hetzelfde als regel hierboven.
+
+           Array.Clear(pokémon, 2, 1); // doet óók exact hetzelfde maar dan via de meest aangewezen manier. Werkt voor álle types van arrays. de vorige twee manieren werken enkel voor een string-array.
+            // je geeft eerst de array, dan welke positie je wil leegmaken, en dan het aantal elementen dat je wil leegmaken (in de geval maar 1)
+
+            
 
             PrintPokemonRoster(pokémon);
 

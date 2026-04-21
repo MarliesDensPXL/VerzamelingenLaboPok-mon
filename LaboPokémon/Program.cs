@@ -78,10 +78,16 @@
 
         static bool IsValidPokemonRosterSize(string[] names) //1.7
         {
-            if (names.Length == 6)
-                return true;
-            else
-                return false;
+            //if (names.Length == 6)
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+            return names.Length == 6; // is een veel kortere manier om een true terug te geven. In de code hierboven controleer je true or false voor een bool die sowieso true or false controleert.
         }
 
         static void TradeFirstPokemon(Trainer trainer1, Trainer trainer2) // GEKNOEI 

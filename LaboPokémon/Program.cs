@@ -44,35 +44,60 @@ namespace LaboPokémon
             string[] pokemons2 = ["Pikachu", "Charmander", "Squirtle", "", "", ""];
             PrintPokemonRoster(pokemons2);
 
-            Pokemon charmeleon = new Pokemon("Charmeleon", "Fire");
-            Pokemon raichu = new Pokemon();
-            raichu.Name = "Raichu";
-            raichu.Type = "Electric";
-            Pokemon golem = new Pokemon();
-            golem.Name = "Golem";
-            golem.Type = "Rock";
-            Pokemon eevee = new Pokemon();
-            eevee.Name = "Eevee";
-            eevee.Type = "Normal";        
-            Pokemon bonsly = new Pokemon("Bonsly", "Rock");            
-            Pokemon treecko = new Pokemon("Treecko", "Grass");
+            
+            
+            //Pokemon charmeleon = new Pokemon("Charmeleon", "Fire");
+            //Pokemon raichu = new Pokemon();
+            //raichu.Name = "Raichu";
+            //raichu.Type = "Electric";
+            //Pokemon golem = new Pokemon();
+            //golem.Name = "Golem";
+            //golem.Type = "Rock";
+            //Pokemon eevee = new Pokemon();
+            //eevee.Name = "Eevee";
+            //eevee.Type = "Normal";        
+            //Pokemon bonsly = new Pokemon("Bonsly", "Rock");            
+            //Pokemon treecko = new Pokemon("Treecko", "Grass");
 
-            Pokemon[] pokémon1 = new Pokemon[] {charmeleon, raichu, golem, eevee, bonsly, treecko};
-            Pokemon[] pokémon2 = new Pokemon[] { raichu, golem, eevee, bonsly, treecko, charmeleon };
+            //Pokemon[] pokémon1 = new Pokemon[] {charmeleon, raichu, golem, eevee, bonsly, treecko};
+            //Pokemon[] pokémon2 = new Pokemon[] { raichu, golem, eevee, bonsly, treecko, charmeleon };
 
+            //1.9
             Trainer trainer1 = new Trainer();
-            trainer1.Pokemon = pokémon1;
+            trainer1.Name = "Marlies";
+            //trainer1.Pokemon = pokémon1;
+            trainer1.Pokemon = new Pokemon[6]
+            {
+                new Pokemon("Pikachu", "Electric", 1),
+                new Pokemon("Charmeleon", "Fire", 1),
+                new Pokemon("Treecko", "Grass", 1),
+                new Pokemon("Squirtle", "Water", 1),
+                null,
+                null,
+            };
             
             Trainer trainer2 = new Trainer();
-            trainer2.Pokemon = pokémon2;
+            trainer2.Name = "Tom";
+            trainer2.Pokemon = new Pokemon[6] // in één weg een array toevoegen en opvullen met nieuwe pokémons (die ook meteen de drie eigenschappen als parameter moeten meekregen, volgens de constructor in de pokemonklasse)
+            {
+                new Pokemon("Bulbasaur", "Water", 1),
+                new Pokemon("Treecko", "Grass", 1),
+                new Pokemon("Squirtle", "Water", 1),
+                new Pokemon("Charmeleon", "Fire", 1),
+                new Pokemon("Pikachu", "Electric", 1),
+                null,
+            };
 
-            Console.WriteLine(trainer1.Pokemon);
-            Console.WriteLine(trainer2.Pokemon);
+            Console.WriteLine($"Pokemons van trainer {trainer1.Name}");
+            PrintPokemonRoster(trainer1.Pokemon);
+            Console.WriteLine($"Pokemons van trainer {trainer2.Name}");
+            PrintPokemonRoster(trainer2.Pokemon);
+            
 
-            TradeFirstPokemon(trainer1, trainer2);
+            //TradeFirstPokemon(trainer1, trainer2);
 
-            Console.WriteLine(trainer1.Pokemon);
-            Console.WriteLine(trainer2.Pokemon);
+            //Console.WriteLine(trainer1.Pokemon);
+            //Console.WriteLine(trainer2.Pokemon);
 
 
         }
@@ -82,6 +107,18 @@ namespace LaboPokémon
             for (int i = 0; i < names.Length; i++)
             {
                 Console.WriteLine($"{i+1}: {names[i]}");
+            }
+        }
+
+        static void PrintPokemonRoster(Pokemon[] pokemons) //1.9
+        {
+            for (int i = 0; i < pokemons.Length; i++)
+            {
+                if (pokemons[i] is not null) // anders krijg je een foutmelding. Zo druk je enkel de pokemons af in je array waar je index niet 'null' is.
+                {
+                   //  Console.WriteLine($"{i + 1}: {pokemons[i]}"); // {pokemons[1] is een volledig pokemon-object. Je wil niet het object afdrukken, je wil de naam van de pokemon afdrukken. Je moet iets om gaan zetten naar een string, naar tekst.
+                    Console.WriteLine($"{i + 1}: {pokemons[i].ToString()}");
+                }
             }
         }
 

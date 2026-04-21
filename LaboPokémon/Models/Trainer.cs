@@ -24,7 +24,9 @@ namespace LaboPokémon.Models
 			set { _pokemon = value; }
 		}
 
+        //kan ook korter met prop ipv propfull
+        //public string Name { get; set; }
+        //public Pokemon[] Pokemons { get; set; }
 
-
-	}
+    }
 }

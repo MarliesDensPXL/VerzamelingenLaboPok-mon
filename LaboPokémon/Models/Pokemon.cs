@@ -21,6 +21,14 @@ namespace LaboPokémon.Models
         public string Type { get; set; }
         public int Level { get; set; }
 
+
+        //1.9
+        public override string? ToString() // om je pokemon-object op een goeie manier om te vormen naar een string.
+        {
+            // return base.ToString(); // zo wordt het 'basis' afgedrukt, maar dat willen we niet.
+            return $"{this.Name} - {this.Type}"; // als je dit als tekst afdrukt, moet je deze waarden afdrukken.
+        }
+
         //private string _name;
 
         //public string Name

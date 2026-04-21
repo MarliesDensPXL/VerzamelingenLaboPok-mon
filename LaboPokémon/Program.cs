@@ -35,6 +35,13 @@
             bool isValid = IsValidPokemonRosterSize(pokémon);
             Console.WriteLine($"Geldige lengte: {(isValid ? "ja" : "nee")}");
 
+            //1.8
+            // 3 manieren om een nieuwe array aan te maken en te initialiseren.
+            //string[] pokemons2= new string[6] {"", "", "", "", "", ""};
+            //string[] pokemons2 = { "", "", "", "", "", "", "" };
+            string[] pokemons2 = ["Pikachu", "Charmander", "Squirtle", "", "", ""];
+            PrintPokemonRoster(pokemons2);
+
             Pokemon charmeleon = new Pokemon("Charmeleon", "Fire");
             Pokemon raichu = new Pokemon();
             raichu.Name = "Raichu";

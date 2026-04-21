@@ -33,7 +33,7 @@
             //1.7
 
             bool isValid = IsValidPokemonRosterSize(pokémon);
-            Console.WriteLine(isValid);
+            Console.WriteLine($"Geldige lengte: {(isValid ? "ja" : "nee")}");
 
             Pokemon charmeleon = new Pokemon("Charmeleon", "Fire");
             Pokemon raichu = new Pokemon();

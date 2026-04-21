@@ -25,7 +25,7 @@
             // je geeft eerst de array, dan welke positie je wil leegmaken, en dan het aantal elementen dat je wil leegmaken (in de geval maar 1) 
 
             
-
+            //1.6
             PrintPokemonRoster(pokémon);
 
             Console.WriteLine();
@@ -66,11 +66,11 @@
 
         }
 
-        static void PrintPokemonRoster(string[] names)
+        static void PrintPokemonRoster(string[] names) //1.6
         {
             for (int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine(names[i]);
+                Console.WriteLine($"{i}: {names[i]}");
             }
         }
 

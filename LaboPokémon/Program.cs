@@ -30,6 +30,8 @@
 
             Console.WriteLine();
 
+            //1.7
+
             bool isValid = IsValidPokemonRosterSize(pokémon);
             Console.WriteLine(isValid);
 
@@ -70,11 +72,11 @@
         {
             for (int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine($"{i}: {names[i]}");
+                Console.WriteLine($"{i+1}: {names[i]}");
             }
         }
 
-        static bool IsValidPokemonRosterSize(string[] names)
+        static bool IsValidPokemonRosterSize(string[] names) //1.7
         {
             if (names.Length == 6)
                 return true;

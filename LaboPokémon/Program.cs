@@ -93,12 +93,15 @@ namespace LaboPokémon
             Console.WriteLine($"Pokemons van trainer {trainer2.Name}");
             PrintPokemonRoster(trainer2.Pokemon);
             
-
-            //TradeFirstPokemon(trainer1, trainer2);
+            //1.10
+            TradeFirstPokemon(trainer1, trainer2);
+            Console.WriteLine($"Pokemons van trainer {trainer1.Name}");
+            PrintPokemonRoster(trainer1.Pokemon);
+            Console.WriteLine($"Pokemons van trainer {trainer2.Name}");
+            PrintPokemonRoster(trainer2.Pokemon);
 
             //Console.WriteLine(trainer1.Pokemon);
             //Console.WriteLine(trainer2.Pokemon);
-
 
         }
 
@@ -136,14 +139,20 @@ namespace LaboPokémon
             return names.Length == 6; // is een veel kortere manier om een true terug te geven. In de code hierboven controleer je true or false voor een bool die sowieso true or false controleert.
         }
 
-        static void TradeFirstPokemon(Trainer trainer1, Trainer trainer2) // GEKNOEI 
+        static void TradeFirstPokemon(Trainer trainer1, Trainer trainer2) //1.10  
         {
+            
+            Pokemon firstoftrainer1 = trainer1.Pokemon[0];
+            Pokemon firstoftrainer2 = trainer2.Pokemon[0];
+
+            trainer1.Pokemon[0] = firstoftrainer2;
+            trainer2.Pokemon[0] = firstoftrainer1;
+                              
+                       
             // Array.Clear(trainer1.Pokemon, 0, 0);
             // trainer1.Pokemon[0] = trainer2.Pokemon[0];
 
-        
-
-            
+                    
             //Pokemon[] tradedPokémon1 = new Pokemon[] { trainer1.Pokemon[0], trainer2.Pokemon[1], trainer2.Pokemon[2], trainer2.Pokemon[3], trainer2.Pokemon[4], trainer2.Pokemon[5] };
             //Pokemon[] tradedPokémon2 = new Pokemon[] { trainer2.Pokemon[0], trainer1.Pokemon[1], trainer1.Pokemon[2], trainer1.Pokemon[3], trainer1.Pokemon[4], trainer1.Pokemon[5] };
 

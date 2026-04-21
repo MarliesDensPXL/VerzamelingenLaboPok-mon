@@ -22,7 +22,7 @@
             // pokémon[2] = string.Empty; maakt de string ook leeg. Doet exact hetzelfde als regel hierboven.
 
            Array.Clear(pokémon, 2, 1); // doet óók exact hetzelfde maar dan via de meest aangewezen manier. Werkt voor álle types van arrays. de vorige twee manieren werken enkel voor een string-array.
-            // je geeft eerst de array, dan welke positie je wil leegmaken, en dan het aantal elementen dat je wil leegmaken (in de geval maar 1)
+            // je geeft eerst de array, dan welke positie je wil leegmaken, en dan het aantal elementen dat je wil leegmaken (in de geval maar 1) 
 
             
 

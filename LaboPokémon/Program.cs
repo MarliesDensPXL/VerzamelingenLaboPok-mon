@@ -1,4 +1,6 @@
-﻿namespace LaboPokémon
+﻿using LaboPokémon.Models;
+
+namespace LaboPokémon
 {
     internal class Program
     {
